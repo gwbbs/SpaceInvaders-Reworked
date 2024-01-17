@@ -64,7 +64,7 @@ void muoviNemici() {
                         posizioneNemicoY[i][j] += 1;
                     }
 
-                    posizioneNemicoX[i][j] += 0.1; // Ridotta la velocità
+                    posizioneNemicoX[i][j] += 1; // Ridotta la velocità
                     if (posizioneNemicoX[i][j] >= LARGHEZZA - 4) {
                         posizioneNemicoX[i][j] = LARGHEZZA - 5;
                         faseMovimento = 1; // Passa alla fase di scendere
@@ -72,7 +72,7 @@ void muoviNemici() {
                 }
                 // Scendere
                 else if (faseMovimento == 1) {
-                    posizioneNemicoY[i][j] += 0.1; // Ridotta la velocità
+                    posizioneNemicoY[i][j] += 1; // Ridotta la velocità
                     if (posizioneNemicoY[i][j] >= ALTEZZA - 1) {
                         posizioneNemicoY[i][j] = ALTEZZA - 2;
                         faseMovimento = 2; // Passa alla fase di sinistra
@@ -84,7 +84,7 @@ void muoviNemici() {
                         posizioneNemicoY[i][j] += 1;
                     }
 
-                    posizioneNemicoX[i][j] -= 0.1; // Ridotta la velocità
+                    posizioneNemicoX[i][j] -= 1; // Ridotta la velocità
                     if (posizioneNemicoX[i][j] <= 0) {
                         posizioneNemicoX[i][j] = 0;
                         faseMovimento = 0; // Passa alla fase di destra
